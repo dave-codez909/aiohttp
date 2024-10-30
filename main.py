@@ -25,14 +25,14 @@ async def fetch_quotes(page_url):
             })
         return quotes
 
-# Main function to run the async fetch and print results
+
 async def main():
     quotes = await fetch_quotes(url)
     for q in quotes:
         print(f"Quote: {q['text']}")
         print(f"Author: {q['author']}")
         print(f"Tags: {', '.join(q['tags'])}")
-        print("\n" + "-" * 50 + "\n")  # Adds a separator line for readability
+        print("\n" + "-" * 50 + "\n") 
 
-# Run the main function
+
 asyncio.run(main())
